@@ -587,7 +587,7 @@ FUNCTION {output.bibitem}
   cite$ write$
   "}" write$
   newline$
-  "\dinatlabel{\upshape{}" dinat.label * "} " *   %% Zeilenumbruch steht in NATBIB.CFG!
+  "\dinatlabel{\upshape{}" dinat.label * "} " * "\newline" *  %% Zeilenumbruch steht in NATBIB.CFG!
   write$
   ""
   before.all 'output.state :=
@@ -1972,7 +1972,7 @@ FUNCTION {calc.label}
   *
   'label :=
   short.list " " *
-  year field.or.null purify$ #1 #4 substring$ * 'dinat.label :=
+  "(" year field.or.null purify$ #1 #4 substring$ * * ")" * 'dinat.label :=
 }
 
 FUNCTION {sort.format.names}
