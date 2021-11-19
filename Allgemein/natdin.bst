@@ -587,7 +587,7 @@ FUNCTION {output.bibitem}
   cite$ write$
   "}" write$
   newline$
-  "\dinatlabel{\upshape{}" dinat.label * "} " * "\newline" *  %% Zeilenumbruch steht in NATBIB.CFG!
+  "\dinatlabel{\upshape{}" dinat.label ":" * * "} " * "\newline" *  %% Zeilenumbruch steht in NATBIB.CFG!
   write$
   ""
   before.all 'output.state :=
